@@ -11,13 +11,18 @@ body {
     overflow-x: hidden;
 }
 
-.main {
+
+/* .main {
     height: 150vh;
-}
+} */
 
 .container {
-    width: 100vw;
+    width: 100%;
     margin: auto;
+}
+
+.header {
+    position: relative;
 }
 
 .header img {
@@ -26,8 +31,38 @@ body {
     object-fit: cover;
 }
 
+
+/* .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+} */
+
+
+/* .header:hover .overlay {
+    visibility: visible;
+    opacity: 1;
+} */
+
+.header::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
 .card-main {
-    width: 90%;
+    width: 72%;
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -36,11 +71,15 @@ body {
 
 .card {
     border-radius: 7px;
-    padding: 30px 40px 100px 30px;
+    padding: 30px 40px 80px 30px;
 }
 
 .card-left {
     background: #ffffff;
+}
+
+.txt {
+    padding-bottom: 20px;
 }
 
 .card-right {
@@ -93,13 +132,13 @@ p {
 
 .msg {
     width: 100%;
-    height: 130px;
     border-radius: 7px;
     border: none;
-    padding: 0 10px 80px 10px;
     font-size: 16px;
     color: #808080;
     margin-bottom: 20px;
+    padding-left: 10px;
+    padding-top: 10px;
 }
 
 i {
