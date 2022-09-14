@@ -23,6 +23,7 @@ body {
 
 .header {
     position: relative;
+    z-index: -1;
 }
 
 .header img {
@@ -30,25 +31,6 @@ body {
     height: 50vh;
     object-fit: cover;
 }
-
-
-/* .overlay {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.7);
-    transition: opacity 500ms;
-    visibility: hidden;
-    opacity: 0;
-} */
-
-
-/* .header:hover .overlay {
-    visibility: visible;
-    opacity: 1;
-} */
 
 .header::after {
     content: '';
@@ -67,6 +49,8 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
+    margin-top: -30px;
+    margin-bottom: 40px;
 }
 
 .card {
